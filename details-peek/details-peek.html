@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Details Peek Example</title>
+    <script src="details-peek.js"></script>
+    <link rel="stylesheet" href="details-peek.css">
+  </head>
+
+  <body>
+
+    <details>
+      <summary>Select some items (without peek)</summary>
+      <ul>
+        <li><label><input type="checkbox"/> <span>One</span></label></li>
+        <li><label><input type="checkbox"/> <span>Two</span></label></li>
+        <li><label><input type="checkbox"/> <span>Three</span></label></li>
+        <li><label><input type="checkbox"/> <span>Four</span></label></li>
+      </ul>
+    </details>
+    
+    <details data-peek data-peek-selector="INPUT:checked + SPAN">
+      <summary>Select some items (with peek)</summary>
+      <ul>
+        <li><label><input type="checkbox"/> <span>One</span></label></li>
+        <li><label><input type="checkbox"/> <span>Two</span></label></li>
+        <li><label><input type="checkbox"/> <span>Three</span></label></li>
+        <li><label><input type="checkbox"/> <span>Four</span></label></li>
+      </ul>
+    </details>
+
+    <details id="fancy" data-peek data-peek-selector="INPUT:checked + SPAN">
+      <summary>Select some items (with slightly fancier peek)</summary>
+      <ul>
+        <li><label><input type="checkbox"/> <span class="index-num">1.</span><span>One</span></label></li>
+        <li><label><input type="checkbox"/> <span class="index-num">2.</span><span>Two</span></label></li>
+        <li><label><input type="checkbox"/> <span class="index-num">3.</span><span>Three</span></label></li>
+        <li><label><input type="checkbox"/> <span class="index-num">4.</span><span>Four</span></label></li>
+      </ul>
+    </details>
+  
+  </body>
+</html>
